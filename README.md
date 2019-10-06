@@ -1,3 +1,3 @@
-# SERVICIO API EN NODEJS PROYECTO PHOENIX🚀
+#  PROYECTO PHOENIX🚀
 
-_El servicio corresponde al proyecto phoenix del producto letgo party el cual consta de un servicio de planeacion de evento corporativos, familiares etc. la idea del proyecto es lanzar a flote un producto comercialmente viable, con el que se le pueda presentar a un usuario la posibilidad de encontrar una serie de servicios que cubran sus necesides para hacer de su evento toda un experiencia y ofrecer tambien los servicios de este_
+_El proyecto phoenix del producto letgo party el cual consta de un servicio de planeacion de evento corporativos, familiares etc. la idea del proyecto es lanzar a flote un producto comercialmente viable, con el que se le pueda presentar a un usuario la posibilidad de encontrar una serie de servicios que cubran sus necesides para hacer de su evento toda un experiencia y ofrecer tambien los servicios de este_
