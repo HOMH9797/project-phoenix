@@ -1,0 +1,32 @@
+{
+  "name": "letgo-party-bck",
+  "version": "1.0.0",
+  "description": "This a part of the project phoenix to the product letgo party",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HOMH9797/project-phoenix.git"
+  },
+  "author": "harold montejo herrera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HOMH9797/project-phoenix/issues"
+  },
+  "homepage": "https://github.com/HOMH9797/project-phoenix#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pg": "^7.12.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.19.3"
+  },
+  "devDependencies": {
+    "dotenv": "^8.1.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.3"
+  }
+}
