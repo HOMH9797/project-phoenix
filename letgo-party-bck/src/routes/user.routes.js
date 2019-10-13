@@ -1,5 +1,6 @@
 module.exports = function(app){
     const User = require("../controllers/user.controller");
     app.post("/api/user", User.createUser)
-    app.get("/api/user", User.findUsers)
+    app.post("/api/finduser", User.findUsers)
+    app.get("/api/findUserToProfile/:profile",User.findUserToProfile)
 }

@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const path = require("path")
+// const glob = require('glob');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -17,6 +18,10 @@ app.use(express.static(path.join(__dirname,'public')));
 // });
 
 require("./src/routes/user.routes")(app)
+// glob( './src/routes/**/*.js', ( err, files ) => {
+//   if(err) throw 'error cargando las rutas en server'
+//   files.forEach(file => require(file)(app));
+// });
 
 // Create a Server
 var server = app.listen(process.env.PORTSERVER, function() {
