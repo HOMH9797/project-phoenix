@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/HOMH9797/project-phoenix#readme",
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "glob": "^7.1.4",
     "pg": "^7.12.1",

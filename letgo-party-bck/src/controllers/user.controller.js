@@ -3,6 +3,7 @@ const Op = db.Sequelize.Op
 const Users = db.User
 const Profiles = db.Profile
 const Prof2usr = db.Profile2User
+const bcrypt = require("bcrypt")
 
 exports.createUser = async (req, res) => {
     try {
@@ -12,7 +13,7 @@ exports.createUser = async (req, res) => {
         await Users.create({
             nameUser: name,
             emailUser: email,
-            passwordUser: password,
+            passwordUser: bcrypt.hashSync(password, 10),
             dateBirth: datebirth
         })
 
@@ -24,24 +25,24 @@ exports.createUser = async (req, res) => {
 
 exports.findUserToProfile = async (req, res) => {
     try {
-        const profile = req.params.profile
+        const idProfile = req.params.profile
 
-        await Prof2usr.findAll({
+        let userResult = await Prof2usr.findAll({
             attributes: [],
             include: [
                 {
                     model: Users,
-                    attributes:["nameUser","emailUser"],
-                },{
+                    attributes: ["nameUser", "emailUser"],
+                }, {
                     model: Profiles,
-                    attributes:[],
-                    where: { nameProfile:profile }
+                    attributes: [],
+                    where: { idProfile }
                 }
             ],
             raw: true
         })
 
-        res.status(200).send({ message: 'ok' })
+        res.status(200).send({ userResult, estado: 'ok' })
 
     } catch (error) {
         res.status(500).send({ error: "Ocurrió un error." })

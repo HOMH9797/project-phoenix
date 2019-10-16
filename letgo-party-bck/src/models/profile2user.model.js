@@ -13,8 +13,8 @@ module.exports = (sequelize, Sequelize) => {
         }
     })
     Profile2User.associate = (models) => {
-        Profile2User.belongsTo(models.Profile, { onDelete: "CASCADE", foreignKey: "idUser" })
-        Profile2User.belongsTo(models.User, { onDelete: "CASCADE", foreignKey: "idProfile" })
+        Profile2User.belongsTo(models.Profile, { onDelete: "CASCADE", foreignKey: "idProfile" })
+        Profile2User.belongsTo(models.User, { onDelete: "CASCADE", foreignKey: "idUser" })
     }
     return Profile2User
 }

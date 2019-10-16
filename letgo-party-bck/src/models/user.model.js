@@ -5,6 +5,10 @@ module.exports = (sequelize, Sequelize) => {
             primaryKey: true,
             autoIncrement: true
         },
+        imgUser:{
+            type: Sequelize.STRING,
+            allowNull:true
+        },
         nameUser: {
             type: Sequelize.STRING,
             require: true
