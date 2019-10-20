@@ -49,9 +49,9 @@ exports.findUserToProfile = async (req, res) => {
     }
 }
 
-exports.findUsers = async (req, res) => {
+exports.filterUsersToName = async (req, res) => {
     try {
-        const { name } = req.body
+        const { name } = req.params
         let resultSearch = ''
 
         resultSearch = await Users.findAll({
@@ -59,6 +59,19 @@ exports.findUsers = async (req, res) => {
                 nameUser: { [Op.like]: `%${name}%` }
             }
         })
+
+        res.status(200).send({ resultSearch })
+
+    } catch (error) {
+        res.status(500).send({ error: "Ocurrió un error." })
+    }
+}
+
+exports.findUsers = async (req, res) => {
+    try {
+        let resultSearch = ''
+
+        resultSearch = await Users.findAll()
 
         res.status(200).send({ resultSearch })
 
