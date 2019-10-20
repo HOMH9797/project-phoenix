@@ -24,7 +24,7 @@ class PerfilesProvider extends Component {
     render() {
         return (
             <PerfilesContext.Provider
-                value={{ categoria: this.state.perfiles }}>
+                value={{ perfil: this.state.perfiles }}>
                     {this.props.children}
             </PerfilesContext.Provider>
         )
