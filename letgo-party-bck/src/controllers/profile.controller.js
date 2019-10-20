@@ -15,3 +15,14 @@ exports.createProfile = async (req, res) => {
         res.status(500).send({ error: "Ocurrió un error." })
     }
 }
+
+exports.findAllProfiles = async (req, res) => {
+    try {
+        let profileResult = await Profile.findAll()
+
+        res.status(200).send({ profileResult })
+
+    } catch (error) {
+        res.status(500).send({ error: "Ocurrió un error." })
+    }
+}

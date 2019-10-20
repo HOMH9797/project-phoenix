@@ -4,6 +4,7 @@ module.exports = function(app){
     const Profile = require("../controllers/profile.controller")
 
     app.post("/api/profile", Profile.createProfile)
+    app.get("/api/profile",Profile.findAllProfiles)
 
     app.post("/api/rol", Rol.createRol)
 
