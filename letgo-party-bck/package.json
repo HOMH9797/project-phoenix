@@ -22,7 +22,7 @@
     "express": "^4.17.1",
     "pg": "^7.12.1",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^5.19.3"
+    "sequelize": "^6.29.0"
   },
   "devDependencies": {
     "dotenv": "^8.1.0",
